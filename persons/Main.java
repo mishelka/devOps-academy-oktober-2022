@@ -15,6 +15,8 @@ public class Main {
 
         //janko.setMother(mother);
         janko.setFather(father);
+//        janko.getFather().setFather(..);
+//        janko.getFather().setMother(..);
 
         Person m = janko.getMother();
         if (m != null) {
@@ -22,15 +24,17 @@ public class Main {
         }
         //DRY - dont repeat yourself
 
-        System.out.println(house1.getOwner().getName());
+//        System.out.println(house1.getOwner().getName());
+//
+//        car1.printCar();
+//        System.out.println(car1);
+//
+//        car1.sellTo(father);
+//        car1.printCar();
+//
+//        System.out.println(car1);
 
-        car1.printCar();
-        System.out.println(car1);
-
-        car1.sellTo(father);
-        car1.printCar();
-
-        System.out.println(car1);
+        System.out.println(janko.toString());
 
 
 //        mother.printData();
@@ -40,8 +44,8 @@ public class Main {
 //        printArrayPerson(parents);
 //        Car[] cars = {car1, car2};
 //        printCarData(cars);
-        House[] houses = {house1, house2, house3};
-        houseData(houses);
+//        House[] houses = {house1, house2, house3};
+//        houseData(houses);
 
     }
 

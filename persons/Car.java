@@ -81,19 +81,15 @@ public class Car {
 
     }
 
-    public void sellTo(Person p){
-        this.owner = p;
+    public void sellTo(Person owner){
+        this.owner = owner;
     }
 
     @Override
     public String toString() {
         return "Car{" +
                 "color='" + color + '\'' +
-                ", numberOfDoors=" + numberOfDoors +
-                ", numberOfSeats=" + numberOfSeats +
-                ", typeOfGearbox='" + typeOfGearbox + '\'' +
-                ", typeOfFuel='" + typeOfFuel + '\'' +
-                ", owner=" + owner +
+                (owner != null ? ", owner=" + owner.getName() : ", for sale") +
                 '}';
     }
 }

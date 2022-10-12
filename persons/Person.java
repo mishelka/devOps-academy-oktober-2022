@@ -94,4 +94,20 @@ public class Person {
     public void printCity(){
         System.out.println("City: " + getCity());
     }
+
+    @Override
+    public String toString() {
+//        String m = "";
+//        if(this.mother != null) {
+//             m = this.mother.toString();
+//        }
+        return "Person{" +
+                "name='" + name + '\'' +
+                (mother != null ? ", mother: " + mother : "") +
+                (father != null ? ", father: " +  father : "") +
+                '}';
+
+        //car - ak ma ownera, vypisat jeho meno,
+        // ak nie vypisat "for sale")
+    }
 }
