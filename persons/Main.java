@@ -9,15 +9,15 @@ public class Main {
         Car car1 = new Car("red", 5, 5, "manual", "benzin", mother);
         Car car2 = new Car("blue", 3, 2, "automat", "gas", father);
 //        Car car3 = new Car("yellow",5,5,"manual","gas","brother");
-        House house1 = new House("brown","Palarikova 12, Kosice, 04001",1, mother);
-        House house2 = new House("yellow","Stara cesta 8, Krompachy, 05342",2, father);
-        House house3 = new House("green", "Maurerova 47, Kalava,05002",2, null);
+        House house1 = new House("brown", "Palarikova 12, Kosice, 04001", 1, mother);
+        House house2 = new House("yellow", "Stara cesta 8, Krompachy, 05342", 2, father);
+        House house3 = new House("green", "Maurerova 47, Kalava,05002", 2, null);
 
         //janko.setMother(mother);
         janko.setFather(father);
 
         Person m = janko.getMother();
-        if(m != null) {
+        if (m != null) {
             m.getName();
         }
         //DRY - dont repeat yourself
@@ -25,6 +25,11 @@ public class Main {
         System.out.println(house1.getOwner().getName());
 
         car1.printCar();
+        System.out.println(car1);
+
+        car1.sellTo(father);
+        car1.printCar();
+
         System.out.println(car1);
 
 
@@ -35,7 +40,7 @@ public class Main {
 //        printArrayPerson(parents);
 //        Car[] cars = {car1, car2};
 //        printCarData(cars);
-        House [] houses = {house1,house2,house3};
+        House[] houses = {house1, house2, house3};
         houseData(houses);
 
     }
