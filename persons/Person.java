@@ -110,4 +110,17 @@ public class Person {
         //car - ak ma ownera, vypisat jeho meno,
         // ak nie vypisat "for sale")
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if(!(obj instanceof Person)) return false;
+        Person p =  (Person) obj;
+
+        //if(!(obj instanceof Person p)) return false;
+
+        return this.name.equals(p.name)
+                && this.age == p.age;
+//        return super.equals(obj);
+    }
 }

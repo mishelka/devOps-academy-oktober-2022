@@ -70,7 +70,6 @@ public class Car {
 
     public void setTypeOfFuel(String typeOfFuel) {
         this.typeOfFuel = typeOfFuel;
-
     }
 
     public void printCar() {
