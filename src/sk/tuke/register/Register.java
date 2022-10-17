@@ -1,5 +1,7 @@
 package sk.tuke.register;
 
+import java.util.Arrays;
+
 /**
  * register.Person register.
  */
@@ -63,6 +65,9 @@ public class Register {
      */
     public void addPerson(Person person) {
         persons[count] = person;
+        if(count > 1) {
+            Arrays.sort(persons, 0, count);
+        }
         count++;
     }
 

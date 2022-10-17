@@ -1,5 +1,6 @@
 package sk.tuke.register;
 
+import sk.tuke.register.ui.ConsoleUI;
 import sk.tuke.register.ui.SwingUI;
 import sk.tuke.register.ui.UserInterface;
 
@@ -16,8 +17,8 @@ public class Main {
 //        register.addPerson(new Person("Janko Hrasko5", "0900123456"));
 //        register.addPerson(new Person("Janko Hrasko6", "0900123456"));
 
-        UserInterface ui = new SwingUI();
-                //new ConsoleUI(register);
+        UserInterface ui = new ConsoleUI(register);
+                //new SwingUI(register);
         ui.run();
     }
 }
