@@ -118,8 +118,8 @@ public class Person implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        if(o == null) return 1;
-        if(!(o instanceof Person)) return 1;
+        if(o == null) return -1;
+        if(!(o instanceof Person)) return -1;
 
         Person p = (Person) o;
         return this.name.compareTo(p.getName());

@@ -71,18 +71,22 @@ public class Register {
     //potom odchytim vynimku v ConsoleUI (aj v Main!) - vsade, kde pridavam novu osobu
     public void addPerson(Person person) {
         persons[count] = person;
-        if(count > 1) {
-            Arrays.sort(persons, 0, count);
-        }
-        //alternativa pre sort - ANONYMNA TRIEDA
+
+        //sort pomocou comparable:
+//        if(count > 1) {
+//            Arrays.sort(persons, 0, count);
+//        }
+
+        //alternativa pre sort pomocou Comparator a vytvorenim ANONYMNEJ TRIEDY
         Arrays.sort(persons, new Comparator<Person>() {
             @Override
             public int compare(Person o1, Person o2) {
-                if(o2 == null) return 1;
-                if(o1 == null) return -1;
+                if(o2 == null) return -1;
+                if(o1 == null) return 1;
                 return o1.getName().compareTo(o2.getName());
             }
         });
+
         count++;
     }
 

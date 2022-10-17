@@ -9,13 +9,13 @@ public class Main {
     public static void main(String[] args) throws Exception {
         var register = new Register(20);
 
-        register.addPerson(new Person("Janko Hrasko1", "0900123456"));
-
-        register.addPerson(new Person("Janko Hrasko2", "0900123456"));
-//        register.addPerson(new Person("Janko Hrasko3", "0900123456"));
-//        register.addPerson(new Person("Janko Hrasko4", "0900123456"));
-//        register.addPerson(new Person("Janko Hrasko5", "0900123456"));
-//        register.addPerson(new Person("Janko Hrasko6", "0900123456"));
+        register.addPerson(new Person("Jan", "0900123456"));
+        register.addPerson(new Person("Anna", "0900123456"));
+        register.addPerson(new Person("Peter", "0900123456"));
+        register.addPerson(new Person("Xenia", "0900123456"));
+        register.addPerson(new Person("Cyril", "0900123456"));
+        register.addPerson(new Person("Bozena", "124567"));
+        register.addPerson(new Person("Bozena", "0900123456"));
 
         UserInterface ui = new ConsoleUI(register);
                 //new SwingUI(register);
