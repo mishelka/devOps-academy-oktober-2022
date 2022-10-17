@@ -23,7 +23,7 @@ public class ConsoleUI implements UserInterface {
     /**
      * Menu options.
      */
-    public enum Option {
+    private enum Option {
         PRINT, ADD, UPDATE, REMOVE, FIND, EXIT
     }
 

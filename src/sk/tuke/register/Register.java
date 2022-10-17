@@ -1,6 +1,7 @@
 package sk.tuke.register;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * register.Person register.
@@ -73,6 +74,15 @@ public class Register {
         if(count > 1) {
             Arrays.sort(persons, 0, count);
         }
+        //alternativa pre sort - ANONYMNA TRIEDA
+        Arrays.sort(persons, new Comparator<Person>() {
+            @Override
+            public int compare(Person o1, Person o2) {
+                if(o2 == null) return 1;
+                if(o1 == null) return -1;
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
         count++;
     }
 
