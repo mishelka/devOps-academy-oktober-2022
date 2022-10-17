@@ -104,7 +104,8 @@ public class ConsoleUI implements UserInterface {
 
         if(p != null) {
             for (int i = 0; i < register.getSize(); i++) {
-                if ((register.getPerson(i).getName().equals(p.getName())) || (register.getPerson(i).getName().equals(p.getPhoneNumber()))) {
+                if ((register.getPerson(i).getName().equals(p.getName())) ||
+                    (register.getPerson(i).getPhoneNumber().equals(p.getPhoneNumber()))) {
                     System.out.println("User name or phone number already exist!");
                     break;
                 } else if ((!register.getPerson(i).getName().equals(p.getName())) || (!register.getPerson(i).getName().equals(p.getPhoneNumber()))) {

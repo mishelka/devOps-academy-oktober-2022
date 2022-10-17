@@ -63,6 +63,11 @@ public class Register {
      *
      * @param person person to append to this register
      */
+    //prejdem cele pole, ak najdem rovnaku osobu, vyhodim novu vynimku DuplicateEntityException
+    //vytvorim triedu pre vynimku
+    //pridam throws do signatury metody
+    //v tele metody, ak nie je osoba unikatna, vyhodim novu vynimku (throw new ...)
+    //potom odchytim vynimku v ConsoleUI (aj v Main!) - vsade, kde pridavam novu osobu
     public void addPerson(Person person) {
         persons[count] = person;
         if(count > 1) {
