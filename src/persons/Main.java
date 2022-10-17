@@ -1,7 +1,5 @@
 package persons;
 
-import java.sql.SQLOutput;
-
 public class Main {
     public static final String DEFAULT_EMPLOYEE_ID = "1234";
 
