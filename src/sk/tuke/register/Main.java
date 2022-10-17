@@ -1,4 +1,4 @@
-package register;
+package sk.tuke.register;
 
 import sk.tuke.register.ui.SwingUI;
 import sk.tuke.register.ui.UserInterface;

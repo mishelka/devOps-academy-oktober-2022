@@ -1,4 +1,4 @@
-package register.ui;
+package sk.tuke.register.ui;
 
 public class SwingUI implements UserInterface {
     @Override

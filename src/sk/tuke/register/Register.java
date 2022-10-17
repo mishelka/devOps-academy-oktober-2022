@@ -1,4 +1,4 @@
-package register;
+package sk.tuke.register;
 
 /**
  * register.Person register.

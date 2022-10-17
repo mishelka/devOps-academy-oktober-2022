@@ -1,4 +1,4 @@
-package register.ui;
+package sk.tuke.register.ui;
 
 import sk.tuke.register.Person;
 import sk.tuke.register.Register;
