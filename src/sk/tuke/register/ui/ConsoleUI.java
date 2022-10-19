@@ -1,7 +1,7 @@
 package sk.tuke.register.ui;
 
 import sk.tuke.register.Person;
-import sk.tuke.register.Register;
+import sk.tuke.register.register.Register;
 import sk.tuke.register.WrongFormatException;
 
 import java.util.Scanner;
@@ -103,7 +103,7 @@ public class ConsoleUI implements UserInterface {
         }
 
         if(p != null) {
-            for (int i = 0; i < register.getSize(); i++) {
+            for (int i = 0; i < register.getCount(); i++) {
                 if ((register.getPerson(i).getName().equals(p.getName())) ||
                     (register.getPerson(i).getPhoneNumber().equals(p.getPhoneNumber()))) {
                     System.out.println("User name or phone number already exist!");

@@ -1,12 +1,16 @@
-package sk.tuke.register;
+package sk.tuke.register.register;
+
+import sk.tuke.register.Person;
+import sk.tuke.register.register.Register;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 
 /**
  * register.Person register.
  */
-public class Register {
+public class ArrayRegister implements Register {
     /**
      * register.Person array.
      */
@@ -22,7 +26,7 @@ public class Register {
      *
      * @param size maximum size of the register
      */
-    public Register(int size) {
+    public ArrayRegister(int size) {
         persons = new Person[size];
         count = 0;
     }
@@ -32,6 +36,7 @@ public class Register {
      *
      * @return the number of persons in this register
      */
+    @Override
     public int getCount() {
         return count;
     }
@@ -51,11 +56,12 @@ public class Register {
      * @param index index of the person to return
      * @return person the person at the specified position in this register
      */
+    @Override
     public Person getPerson(int index) {
         return persons[index];
     }
 
-    public Register(Person[] persons) {
+    public ArrayRegister(Person[] persons) {
         this.persons = persons;
     }
 
@@ -69,6 +75,7 @@ public class Register {
     //pridam throws do signatury metody
     //v tele metody, ak nie je osoba unikatna, vyhodim novu vynimku (throw new ...)
     //potom odchytim vynimku v ConsoleUI (aj v Main!) - vsade, kde pridavam novu osobu
+    @Override
     public void addPerson(Person person) {
         persons[count] = person;
 
@@ -98,6 +105,7 @@ public class Register {
      * @param name name of a person to search for
      * @return person with specified phone number
      */
+    @Override
     public Person findPersonByName(String name) {
         for (int i = 0; i < getCount(); i++) {
             if (getPerson(i).getName().equals(name)) {
@@ -115,6 +123,7 @@ public class Register {
      * @param phoneNumber phone number of a person to search for
      * @return person with specified phone number
      */
+    @Override
     public Person findPersonByPhoneNumber(String phoneNumber) {
         for (int i = 0; i < getCount(); i++) {
             if (getPerson(i).getPhoneNumber().equals(phoneNumber)) {
@@ -130,6 +139,7 @@ public class Register {
      *
      * @param person person to remove
      */
+    @Override
     public void removePerson(Person person) {
         for (int i = 0; i < count; i++) {
             if (person.equals(persons[i])) {
@@ -139,5 +149,10 @@ public class Register {
             }
         }
         count--;
+    }
+
+    @Override
+    public List<Person> getPersons() {
+        return Arrays.asList(persons);
     }
 }

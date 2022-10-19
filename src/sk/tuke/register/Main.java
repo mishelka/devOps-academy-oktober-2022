@@ -1,13 +1,15 @@
 package sk.tuke.register;
 
+import sk.tuke.register.register.ArrayListRegister;
+import sk.tuke.register.register.ArrayRegister;
+import sk.tuke.register.register.Register;
 import sk.tuke.register.ui.ConsoleUI;
-import sk.tuke.register.ui.SwingUI;
 import sk.tuke.register.ui.UserInterface;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        var register = new Register(20);
+        Register register = new ArrayListRegister();
 
         register.addPerson(new Person("Jan", "0900123456"));
         register.addPerson(new Person("Anna", "0900123456"));
